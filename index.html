@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Elizabeth Agarano | Personal Website</title>
+    
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,400&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="style.css">
+
+    <body>
+        <div class="container">
+        
+            <header class="hero">
+                <span class="sub-greeting">HELLO! I AM</span>
+                <h1 class="main-name typing-text">Elizabeth Agarano</h1>
+                <p class="tagline">A 3rd Year Computer Science Student @ <strong>UNP</strong></p>
+            
+                <div class="social-links">
+                    <a href="https:www.linkedin.com/in/elizabethedicaagarano27321" target="_blank" aria-label="LinkedIn" class="icon-btn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://github.com/eliezaa" target="_blank" aria-label="GitHub" class="icon-btn"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.instagram.com/eeliezapot/" target="_blank" aria-label="Instagram" class="icon-btn"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/elizabetheedica/" target="_blank" aria-label="Facebook" class="icon-btn"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+            </header>
+
+        
+            <section class="content-section">
+                <div class="section-header">
+                    <p class="section-nav">PROJECTS &nbsp;/&nbsp; PICTURES</p>
+                    <p class="section-subtitle">Featuring project highlights, and other stuffs</p>
+                </div>
+
+                <div class="projects-container empty-state">
+                    <p>Projects coming soon...</p>
+                </div>
+            </section>
+            
+            <section class="content-section">
+                <header class="AboutMe">
+                <h4 class="about_me">About Me</h4>
+                <p class="Information">I have a strong interest in Data Engineering and Embedded Systems.Currently, I am focusing on Python for Data Engineering</p>
+            </header>
+
+                <div class="terminal-box">
+                <div class="terminal-header">elieza@unp-cs:~$ (Type 'help' for commands)</div>
+            <div id="terminal-output" class="terminal-output">
+            Welcome! Type 'help', 'skills', or 'contact' to interact.
+            </div>
+            <div class="terminal-input-line">
+            <span class="terminal-prompt">&gt;</span>
+            <input type="text" id="terminal-input" class="terminal-input" placeholder="type a command..." autofocus autocomplete="off">
+        </div>
+        </div>
+            </section>
+            
+
+            <section class="content-section">
+                <div class="education-header">
+                    <p class="section-nav-edu"><b>EDUCATION</b></p>
+                    <p>2025 - PRESENT</p>
+                    <p class="UNP">UNIVERSITY OF NORTHERN PHILIPPINES</p>
+                    <p>2024</p>
+                    <p class="MMSU">MARIANO MARCOS STATE UNIVERSITY</p>
+                    <p>2018 - 2024</p>
+                    <p class="PNHS">PINILI NATIONAL HIGH SCHOOL</p>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <p class="section-nav-edu">SKILLS</p>
+                <div class="social-links">
+                    <a aria-label="PostgreSQL" class="icon-btn"><i class="fa-solid fa-database"></i></a>
+                    <a aria-label="Python" class="icon-btn"><i class="fa-brands fa-python"></i></a>
+                    <a aria-label="Instagram" class="icon-btn"><i class="fa-brands fa-c"></i></a>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <p class="section-nav-edu">CONTACT</p>
+                <div class="social-links">
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=elizabetheagarano@gmail.com&su=Inquiry%20About%20Your%20Services&body=Hi%20there,%0D%0AI%20would%20like%20to%20inquire%20about " target="_blank" rel="noopener noreferrer" target="_blank" aria-label="Email" class="icon-btn"><i class="fa-solid fa-envelope"></i></a>           
+                </div>
+            </section>
+        </div>
+
+        <script>
+        const termInput = document.getElementById('terminal-input');
+        const termOutput = document.getElementById('terminal-output');
+
+         const commands = {
+        'help': 'Available commands: <b>skills</b>, <b>education</b>, <b>interest</b>, <b>clear</b>',
+        'skills': 'Primary Stack: Python, C, PostgreSQL',
+        'education': 'UNP (2025-Present) | MMSU (2024) | PNHS (2018-2024)',
+        'interest': 'Building reliable ETL data pipelines and embedded systems.',
+        'contact': 'Email: elizabetheagarano@gmail.com'
+        };
+
+        termInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+            const inputVal = termInput.value.trim().toLowerCase();
+            termInput.value = '';
+
+            if (inputVal === 'clear') {
+                termOutput.innerHTML = '';
+                return;
+            }
+
+            const response = commands[inputVal] || `Command not found: '${inputVal}'. Type 'help' for options.`;
+            termOutput.innerHTML += `<div style="margin-top: 6px;"><span style="color:#8c887b">&gt; ${inputVal}</span><br>${response}</div>`;
+            termOutput.scrollTop = termOutput.scrollHeight;
+            }
+            });
+        </script>
+
+    </body>
+</html>
