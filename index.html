@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Elizabeth Agarano | Page</title>
+        <title>Elizabeth Agarano | Personal Website</title>
     
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,400&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -28,7 +28,7 @@
             <section class="content-section">
                 <div class="section-header">
                     <p class="section-nav">PROJECTS &nbsp;/&nbsp; PICTURES</p>
-                    <p class="section-subtitle">Featured projects, and other stuffs</p>
+                    <p class="section-subtitle">Featuring project highlights, and other stuffs</p>
                 </div>
 
                 <div class="projects-container empty-state">
@@ -39,7 +39,7 @@
             <section class="content-section">
                 <header class="AboutMe">
                 <h4 class="about_me">About Me</h4>
-                <p class="Information">I have a strong interest in Data Engineering and Embedded Systems. Currently, I am focusing on Python for Data Engineering</p>
+                <p class="Information">I have a strong interest in Data Engineering and Embedded Systems.Currently, I am focusing on Python for Data Engineering</p>
             </header>
 
                 <div class="terminal-box">
@@ -85,33 +85,33 @@
         </div>
 
         <script>
-        const termInput = document.getElementById('terminal-input');
-        const termOutput = document.getElementById('terminal-output');
+            const termInput = document.getElementById('terminal-input');
+            const termOutput = document.getElementById('terminal-output');
 
-         const commands = {
-        'help': 'Available commands: <b>skills</b>, <b>education</b>, <b>interest</b>, <b>clear</b>',
-        'skills': 'Primary Stack: Python, C, PostgreSQL',
-        'education': 'UNP (2025-Present) | MMSU (2024) | PNHS (2018-2024)',
-        'interest': 'Building reliable ETL data pipelines and embedded systems.',
-        'contact': 'Email: elizabetheagarano@gmail.com',Instagram Account: @eeliezapot'
-        };
+             const commands = {
+                'help': 'Available commands: <b>skills</b>, <b>education</b>, <b>interest</b>, <b>clear</b>',
+                'skills': 'Primary Stack: Python, C, PostgreSQL',
+                'education': 'UNP (2025-Present) | MMSU (2024) | PNHS (2018-2024)',
+                'interest': 'Building reliable ETL data pipelines and embedded systems.',
+                'contact': 'Email: elizabetheagarano@gmail.com, Instagram: @eeliezapot'
+            };
 
-        termInput.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter') {
-            const inputVal = termInput.value.trim().toLowerCase();
-            termInput.value = '';
+            termInput.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter') {
+                    const inputVal = termInput.value.trim().toLowerCase();
+                    termInput.value = '';
 
-            if (inputVal === 'clear') {
-                termOutput.innerHTML = '';
-                return;
-            }
+                if (inputVal === 'clear') {
+                    termOutput.innerHTML = '';
+                    return;
+                }
 
-            const response = commands[inputVal] || `Command not found: '${inputVal}'. Type 'help' for options.`;
-            termOutput.innerHTML += `<div style="margin-top: 6px;"><span style="color:#8c887b">&gt; ${inputVal}</span><br>${response}</div>`;
-            termOutput.scrollTop = termOutput.scrollHeight;
-            }
+                const response = commands[inputVal] || `Command not found: '${inputVal}'. Type 'help' for options.`;
+                termOutput.innerHTML += `<div style="margin-top: 6px;"><span style="color:#8c887b">&gt; ${inputVal}</span><br>${response}</div>`;
+                termOutput.scrollTop = termOutput.scrollHeight;
+                }
             });
-        </script>
+            </script>
 
     </body>
 </html>
